@@ -6,7 +6,11 @@
 
   <groupId>tech.hidetora</groupId>
   <artifactId>multi-tenant-microservice</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>eureka-server</module>
+  </modules>
 
   <name>multi-tenant-microservice</name>
   <url>https://hidetora.tech</url>
@@ -17,6 +21,7 @@
     <maven.compiler.target>17</maven.compiler.target>
     <java.version>17</java.version>
     <spring-boot.version>3.0.5</spring-boot.version>
+    <spring-cloud.version>2022.0.3</spring-cloud.version>
     <spring.boot.maven.plugin.version>3.0.5</spring.boot.maven.plugin.version>
   </properties>
 
@@ -26,6 +31,13 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
         <version>${spring-boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
